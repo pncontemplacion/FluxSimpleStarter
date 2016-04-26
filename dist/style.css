@@ -1,6 +1,4 @@
 /*
-  Docs at http://http://simpleweatherjs.com
-
   Look inspired by http://www.degreees.com/
   Used for demo purposes.
 
@@ -27,7 +25,7 @@ body {
 }
 
 #weather {
-    width: 500px;
+  /*  width: 500px; */
     margin: 0px auto;
     text-align: center;
     text-transform: uppercase;
@@ -106,11 +104,11 @@ i {
 }
 
 #weather li {
-    background: #fff;
-    background: rgba(255,255,255,0.90);
-    padding: 20px;
+    color: #fff;
+    background: rgba(150,15,230,0.90);
+    padding: 5px;
     display: inline-block;
-    border-radius: 5px;
+    border-radius: 55%;
 }
 
 #weather .currently {
@@ -133,7 +131,9 @@ background: -webkit-linear-gradient(top,  #cb60b3 0%,#ad1283 50%,#de47ac 100%); 
     -webkit-border-radius: 50%;
     border-radius: 50%;
 }
-
+.forecast {
+    color: #fff;
+}
 li {
     list-style-type:none !important;
 }

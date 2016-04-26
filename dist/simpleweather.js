@@ -19,7 +19,7 @@ $('.js-geolocation').on('click', function() {
 
 /*
  * Test Locations
- * Hays, KS
+ * Tampa,FL
  */
 $(document).ready(function() {
     loadWeather('Hays,KS',''); //@params location, woeid
@@ -34,9 +34,15 @@ function loadWeather(location, woeid) {
             html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
             html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
             html += '<li class="currently">'+weather.currently+'</li>';
-            html += '<li>'+weather.alt.temp+'&deg;C</li></ul>';
+            html += '<li>'+'Low:'+weather.low+'&deg;F'+' High:'+weather.high+'&deg;F</li></ul>';
+            html += '<p class="forecast">'+weather.forecast[1].day+':'+'<i class="icon-'+weather.forecast[1].code+'"></i>';
+            html += weather.forecast[2].day+':'+'<i class="icon-'+weather.forecast[2].code+'"></i>';
+            html += weather.forecast[3].day+':'+'<i class="icon-'+weather.forecast[3].code+'"></i>';
+            html += weather.forecast[4].day+':'+'<i class="icon-'+weather.forecast[4].code+'"></i>';
+            html += weather.forecast[5].day+':'+'<i class="icon-'+weather.forecast[5].code+'"></i></p>';
 
             $("#weather").html(html);
+
         },
         error: function(error) {
             $("#weather").html('<p>'+error+'</p>');
